@@ -20,12 +20,10 @@ font-size: 60px;
 }
 
 .form{
-    height: 600px;
+    height: auto;
     width: 50%;
     background-color: white;
     border-radius: 3%;
-    /* display: grid;
-    place-items: center; */
     padding: 30px;
 
 }
@@ -44,21 +42,22 @@ border: 1px solid #222;
 border-radius: 4px;
 font-size: larger;
 cursor: pointer;
-background-color:white;
-color: #222;
 padding: 10px;
 margin: 15px 0;
 text-align: left;
 transition: all 0.3s;
 }
 
-.btn:hover{
+.btn:hover:not([disabled]){
     background: #222;
     color: #fff;
 }
 
+.btn:disabled{
+    cursor: no-drop;
+}
 
-.next-button{
+#next-button{
 background-color:cadetblue;
 font-size: large;
 color: #222;
@@ -69,6 +68,14 @@ margin: 20px auto 0;
 border-radius: 4px;
 cursor: pointer;
 display: none;
+}
+
+.correct{
+    background: #9aeabc;
+}
+
+.incorrect{
+    background: #ff9393;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
